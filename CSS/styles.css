@@ -155,8 +155,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  justify-content: center;
-  align-items: center;
   text-align: center;
 }
 main header {
@@ -183,6 +181,7 @@ main section {
   align-items: center;
   gap: 1.5rem;
   max-width: 72rem;
+  box-sizing: border-box;
 }
 main section article {
   display: flex;
@@ -192,9 +191,11 @@ main section article {
   text-align: left;
   gap: 1rem;
   box-shadow: 0 0.5rem 0.75rem hsla(212, 86%, 40%, 0.15);
+  box-sizing: border-box;
+  max-width: 100%;
 }
 main section article h2 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--Very-Dark-Blue);
 }
@@ -203,6 +204,7 @@ main section article p {
   line-height: 1.5;
   color: var(--Grayish-Blue);
   margin-bottom: 1rem;
+  margin-right: 1rem;
 }
 main section article img {
   align-self: flex-end;
@@ -223,4 +225,24 @@ main section div {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+@media (max-width: 478px) {
+  body {
+    padding: 3rem 1.5rem;
+  }
+  body main {
+    max-width: 100%;
+  }
+  body main section {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+  }
+  body main section p {
+    margin-bottom: 1.5rem;
+  }
+  body main section div {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=styles.css.map */

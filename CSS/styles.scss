@@ -157,8 +157,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    justify-content: center;
-    align-items: center;
     text-align: center;
 
     header {
@@ -189,6 +187,7 @@ main {
         align-items: center;
         gap: 1.5rem;
         max-width: 72rem;
+        box-sizing: border-box;
 
         article {
             display: flex;
@@ -198,9 +197,11 @@ main {
             text-align: left;
             gap: 1rem;
             box-shadow: 0 0.5rem 0.75rem hsla(212, 86%, 40%, 0.15);
+            box-sizing: border-box;
+            max-width: 100%;
 
             h2 {
-                font-size: 1.2rem;
+                font-size: 1.5rem;
                 font-weight: 600;
                 color: var(--Very-Dark-Blue);
             }
@@ -210,6 +211,7 @@ main {
                 line-height: 1.5;
                 color: var(--Grayish-Blue);
                 margin-bottom: 1rem;
+                margin-right: 1rem;
             }
 
             img {
@@ -237,6 +239,30 @@ main {
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
+        }
+    }
+}
+
+@media (max-width: 478px) {
+    body {
+        padding: 3rem 1.5rem;
+
+        main {
+            max-width: 100%;
+
+            section {
+                display: flex;
+                flex-direction: column;
+                max-width: 100%;
+
+                p {
+                    margin-bottom: 1.5rem;
+                }
+
+                div {
+                    flex-direction: column;
+                }
+            }
         }
     }
 }
