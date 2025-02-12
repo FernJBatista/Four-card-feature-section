@@ -160,12 +160,16 @@ main {
 main header {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 1.5rem;
 }
 main header h1 {
   font-size: 2rem;
   line-height: 1.2;
   color: var(--Very-Dark-Blue);
+  max-width: 24ch;
+  font-weight: 300;
 }
 main header h1 strong {
   font-weight: 600;
